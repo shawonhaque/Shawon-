@@ -1,21 +1,39 @@
-# Routes
+# Shawon Haque — Full Stack Developer Portfolio
 
-TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
-defines a route. Do **not** create `src/pages/`, `src/routes/_app/index.tsx`, or
-`app/layout.tsx` — those are Next.js / Remix conventions. The only root layout
-is `src/routes/__root.tsx`.
+A responsive, high-performance interactive personal portfolio website for **Shawon Haque**, Full Stack Developer. Built with React 19, TanStack Start (SSR), Tailwind CSS v4, and Lenis smooth scrolling.
 
-## Conventions
+## Key Features
 
-| File                     | URL                                                     |
-| ------------------------ | ------------------------------------------------------- |
-| `index.tsx`              | `/`                                                     |
-| `about.tsx`              | `/about`                                                |
-| `users/index.tsx`        | `/users`                                                |
-| `users/$id.tsx`          | `/users/:id` (dynamic — bare `$`, no curly braces)      |
-| `posts/{-$category}.tsx` | `/posts/:category?` (optional segment)                  |
-| `files/$.tsx`            | `/files/*` (splat — read via `_splat` param, never `*`) |
-| `_layout.tsx`            | layout route (renders children via `<Outlet />`)        |
-| `__root.tsx`             | app shell — wraps every page; preserve `<Outlet />`     |
+- **Talking Video Hero**: Looping video self-introduction with audio controls and visibility observer.
+- **Interactive Developer ID Card**: Damped pendulum swing with pointer physics and 3D flip effect on hover/tap.
+- **Periodic Table of Skills**: Filterable grid of tech stack elements with brand SVGs and live inspector panel with brand glows.
+- **Accordion Project Showcase**: Expandable cards highlighting projects (NEXORA, Personal Portfolio) with interactive illustrative UI sketches.
+- **Experience Timeline**: Vertical progressive path tracing career and education stops.
+- **Contact & Footer**: Interactive hopping letter typography, one-click email copy with toast confirmation, and social links.
 
-`routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+## External Reference & Conversation
+- **All-Hands Canvas Conversation**: [https://app.all-hands.dev/canvas/conversations/1145dcf60f5c445ea1fc196205b312ec?backend=locked-cloud&org=8d88fb08-b41d-4bb3-bbb5-276ddfbc92dd](https://app.all-hands.dev/canvas/conversations/1145dcf60f5c445ea1fc196205b312ec?backend=locked-cloud&org=8d88fb08-b41d-4bb3-bbb5-276ddfbc92dd)
+
+## Tech Stack
+
+- **Framework**: TanStack Start (React 19) + Nitro SSR
+- **Styling**: Tailwind CSS v4 + `@fontsource-variable/inter-tight`, `jetbrains-mono`, `instrument-serif`
+- **Animation & Physics**: Lenis smooth scroll, requestAnimationFrame pendulum, CSS 3D transforms
+- **Icons**: `simple-icons` + `lucide-react`
+- **Testing**: Vitest + Testing Library
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start local development server on port 3000
+npm run dev
+
+# Build for production
+npm run build
+
+# Run test suite
+npm test
+```
