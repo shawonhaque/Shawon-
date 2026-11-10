@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import portrait from "@/assets/hero/portrait-bust.webp.asset.json";
+import { withBase } from "@/lib/utils";
 import { PROFILE, PROJECTS } from "@/lib/data";
 import { prefersReducedMotion } from "@/lib/hooks";
 
@@ -83,7 +84,7 @@ function IdCard() {
             <div className="idcard-photo">
               <div className="idcard-photo-clip">
                 <img
-                  src={portrait.url}
+                  src={withBase(portrait.url)}
                   alt={`Portrait of ${PROFILE.name}`}
                   width={480}
                   height={600}

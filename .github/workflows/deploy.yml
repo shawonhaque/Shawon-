@@ -28,18 +28,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build static assets
+      - name: Run tests
+        run: npm test
+
+      - name: Build static site
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
         run: |
           npm run build
-          npm run dev &
-          DEV_PID=$!
-          sleep 6
-          python3 scripts/prepare-pages.py
-          kill $DEV_PID || true
+          touch dist/client/.nojekyll
+          cp dist/client/index.html dist/client/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -47,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ".output/public"
+          path: "dist/client"
 
       - name: Deploy to GitHub Pages
         id: deployment

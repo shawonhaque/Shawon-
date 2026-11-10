@@ -33,4 +33,13 @@ npm run build
 
 # Run test suite
 npm test
+
+# Build the static GitHub Pages version (served from /Shawon-/)
+BASE_PATH=/Shawon-/ npm run build   # output: dist/client
 ```
+
+## Deployment
+
+Every push to `main` runs `.github/workflows/deploy.yml`: it installs dependencies, runs the tests, prerenders the site with `BASE_PATH` set to the repository name, and publishes `dist/client` to GitHub Pages.
+
+Live site: https://shawonhaque.github.io/Shawon-/

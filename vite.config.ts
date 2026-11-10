@@ -9,8 +9,18 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// BASE_PATH lets the same code run at "/" locally and at "/Shawon-/" on GitHub Pages.
+const basePath = process.env["BASE_PATH"];
+const base = basePath || "/";
+
 export default defineConfig({
+  vite: { base },
+  // GitHub Pages is static hosting: emit plain prerendered HTML instead of a Worker bundle.
+  ...(basePath ? { nitro: false as const } : {}),
   tanstackStart: {
+    router: { basepath: base },
+    prerender: { enabled: true, crawlLinks: false },
+    pages: [{ path: "/" }],
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },

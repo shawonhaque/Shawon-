@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import heroMp4 from "@/assets/hero/hero.mp4.asset.json";
 import heroWebm from "@/assets/hero/hero.webm.asset.json";
+import { withBase } from "@/lib/utils";
 import { PROFILE } from "@/lib/data";
 import { scrollToTarget } from "@/lib/scroll";
 
@@ -64,7 +65,7 @@ export function Hero() {
     if (!el || !v) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        visible.current = entry.intersectionRatio >= 0.35;
+        visible.current = (entry?.intersectionRatio ?? 0) >= 0.35;
         if (visible.current) v.play().catch(() => {});
         else v.pause();
       },
@@ -109,8 +110,8 @@ export function Hero() {
           preload="auto"
           aria-label={`${PROFILE.name} introducing himself: "Hi, I'm Shawon Haque. I'm a full-stack developer. I build responsive web applications, interactive websites, and AI-powered platforms."`}
         >
-          <source src={heroWebm.url} type="video/webm" />
-          <source src={heroMp4.url} type="video/mp4" />
+          <source src={withBase(heroWebm.url)} type="video/webm" />
+          <source src={withBase(heroMp4.url)} type="video/mp4" />
         </video>
       </div>
 

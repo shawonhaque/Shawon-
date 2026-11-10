@@ -1,5 +1,6 @@
 // Every string here comes from Shawon-Haque-Resume.pdf. Components only read from this file.
 import resumeAsset from "@/assets/Shawon-Haque-Resume.pdf.asset.json";
+import { withBase } from "@/lib/utils";
 
 export type Family =
   "Languages" | "Frontend" | "Backend" | "Databases" | "Tools";
@@ -46,7 +47,7 @@ export const PROFILE = {
   linkedinLabel: "linkedin.com/in/shawon-haque",
   website: "https://shawonhaque.github.io/",
   websiteLabel: "shawonhaque.github.io",
-  resume: resumeAsset.url,
+  resume: withBase(resumeAsset.url),
   resumeFile: "Shawon-Haque-Resume.pdf",
   resumeSummary:
     "Full Stack Developer working across the modern JavaScript ecosystem, with a focus on React.js and Next.js on the frontend and Node.js on the server. Builds reusable, accessible interfaces on top of clean, maintainable architecture, and treats performance, accessibility and security as defaults rather than additions.",

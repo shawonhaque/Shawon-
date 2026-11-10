@@ -20,7 +20,7 @@ export function Skills() {
   const tableRef = useRef<HTMLDivElement>(null);
   const inView = useInView(tableRef, { threshold: 0.15 });
   const [filter, setFilter] = useState<Family | "All">("All");
-  const [activeId, setActiveId] = useState(SKILLS[0].id);
+  const [activeId, setActiveId] = useState(SKILLS[0]!.id);
   const cols = useCols();
   const active = SKILLS.find((s) => s.id === activeId)!;
   const projects = SKILL_PROJECTS[active.id] ?? [];
