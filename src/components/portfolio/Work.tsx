@@ -87,9 +87,45 @@ function PortfolioUI() {
   );
 }
 
+function TalkingVideoUI() {
+  return (
+    <div className="flex h-full flex-col gap-3 p-5 pt-12">
+      <div className="card flex flex-1 flex-col items-center justify-center p-4 text-center">
+        <div className="relative mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-ink text-paper shadow-md">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <span className="absolute -inset-1 animate-ping rounded-full border border-ink opacity-25" />
+        </div>
+        <span className="mono text-[12px] font-semibold text-ink">
+          3D AVATAR HERO
+        </span>
+        <span className="text-[11px] text-mute mt-1">
+          Audio-Synced AI Character
+        </span>
+      </div>
+      <div className="grid grid-cols-2 gap-2 text-center text-[11px]">
+        <span className="card mono px-2 py-2 text-ink-2">
+          Physics Lanyard ID
+        </span>
+        <span className="card mono px-2 py-2 text-ink-2">
+          Periodic Tech Stack
+        </span>
+      </div>
+    </div>
+  );
+}
+
 const UIS: Record<string, () => React.ReactElement> = {
   nexora: NexoraUI,
   portfolio: PortfolioUI,
+  "shawon-3d": TalkingVideoUI,
 };
 
 function Panel({
@@ -155,16 +191,29 @@ function Panel({
               </span>
             ))}
           </div>
-          {p.link && (
-            <a
-              href={p.link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary mt-5 w-fit"
-            >
-              {p.link.label} ↗
-            </a>
-          )}
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            {p.link && (
+              <a
+                href={p.link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary w-fit"
+              >
+                {p.link.label} ↗
+              </a>
+            )}
+            {p.github && (
+              <a
+                href={p.github.href}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-ghost flex items-center gap-1.5 w-fit"
+              >
+                <TechLogo name="github" size={14} />
+                {p.github.label} ↗
+              </a>
+            )}
+          </div>
         </div>
         <div
           className="panel-ui"

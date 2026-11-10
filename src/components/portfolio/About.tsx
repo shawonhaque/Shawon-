@@ -129,7 +129,11 @@ function IdCard() {
                 Node.js on the server.
               </li>
               <li>
-                — Builder of {PROJECTS.map((p) => p.title).join(" and ")}.
+                — Builder of{" "}
+                {PROJECTS.map((p) => p.title)
+                  .join(", ")
+                  .replace(/, ([^,]*)$/, " & $1")}
+                .
               </li>
               <li>
                 — PostgreSQL schemas with Row Level Security on every table.

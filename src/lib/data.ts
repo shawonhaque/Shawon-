@@ -22,6 +22,7 @@ export interface Project {
   features: string[];
   tech: { name: string; logo: string }[];
   link?: { label: string; href: string };
+  github?: { label: string; href: string };
 }
 
 export interface Stop {
@@ -210,6 +211,14 @@ export const PROJECTS: Project[] = [
       { name: "Supabase", logo: "supabase" },
       { name: "PostgreSQL", logo: "postgres" },
     ],
+    link: {
+      label: "Live Demo",
+      href: "https://shawonhaque.github.io/Nexora/",
+    },
+    github: {
+      label: "GitHub Repo",
+      href: "https://github.com/shawonhaque/Nexora",
+    },
   },
   {
     id: "portfolio",
@@ -217,14 +226,14 @@ export const PROJECTS: Project[] = [
     title: "Personal Portfolio",
     kicker: "Responsive, accessible single-page site",
     description:
-      "A responsive, accessible single-page site with no framework overhead and no build step.",
+      "A responsive, accessible single-page site with case studies, no framework overhead and no build step. Deployed directly on GitHub Pages.",
     features: [
       "Light and dark themes with system detection",
       "Keyboard navigation and visible focus states",
       "Reduced-motion support",
       "Complete SEO and social metadata",
       "Structured data and a sitemap",
-      "A custom 404 page",
+      "A custom 404 page & GitHub Pages deployment",
     ],
     tech: [
       { name: "HTML", logo: "html" },
@@ -234,29 +243,65 @@ export const PROJECTS: Project[] = [
       { name: "Accessibility", logo: "a11y" },
     ],
     link: {
-      label: "Visit shawonhaque.github.io",
+      label: "Live Demo",
       href: "https://shawonhaque.github.io/",
+    },
+    github: {
+      label: "GitHub Repo",
+      href: "https://github.com/shawonhaque/shawonhaque.github.io",
+    },
+  },
+  {
+    id: "shawon-3d",
+    index: "03",
+    title: "Talking-Video Portfolio",
+    kicker: "Interactive 3D Avatar & Modern SSR Portfolio",
+    description:
+      "Next-generation developer portfolio featuring an AI-crafted talking 3D video avatar intro with synced voice, interactive physics lanyard ID card, periodic table tech inspector, and TanStack Start SSR architecture.",
+    features: [
+      "Seamless talking 3D video avatar hero loop",
+      "Audio-synced autoplay with visitor unlock controls",
+      "Damped pendulum physics lanyard developer badge",
+      "Periodic table skill stack inspector with brand glows",
+      "Accordion project gallery & timeline view",
+      "TanStack Start SSR + Tailwind CSS v4",
+    ],
+    tech: [
+      { name: "React 19", logo: "react" },
+      { name: "TypeScript", logo: "typescript" },
+      { name: "Tailwind CSS", logo: "tailwind" },
+      { name: "Node.js", logo: "node" },
+      { name: "GitHub Actions", logo: "actions" },
+    ],
+    link: {
+      label: "Live Site",
+      href: "https://shawonhaque.github.io/Shawon-/",
+    },
+    github: {
+      label: "GitHub Repo",
+      href: "https://github.com/shawonhaque/Shawon-",
     },
   },
 ];
 
 /** Which projects use a given skill, derived from the résumé project write-ups. */
 export const SKILL_PROJECTS: Record<string, string[]> = {
-  react: ["NEXORA"],
-  typescript: ["NEXORA"],
+  react: ["NEXORA", "Talking-Video Portfolio"],
+  typescript: ["NEXORA", "Talking-Video Portfolio"],
   vite: ["NEXORA"],
-  tailwind: ["NEXORA"],
+  tailwind: ["NEXORA", "Talking-Video Portfolio"],
   supabase: ["NEXORA"],
   postgres: ["NEXORA"],
   rls: ["NEXORA"],
-  actions: ["NEXORA"],
-  github: ["NEXORA", "Personal Portfolio"],
+  actions: ["NEXORA", "Talking-Video Portfolio"],
+  github: ["NEXORA", "Personal Portfolio", "Talking-Video Portfolio"],
   html: ["Personal Portfolio"],
-  css: ["Personal Portfolio"],
+  css: ["Personal Portfolio", "Talking-Video Portfolio"],
   javascript: ["Personal Portfolio"],
-  seo: ["Personal Portfolio"],
-  a11y: ["Personal Portfolio"],
-  responsive: ["Personal Portfolio"],
+  seo: ["Personal Portfolio", "Talking-Video Portfolio"],
+  a11y: ["Personal Portfolio", "Talking-Video Portfolio"],
+  responsive: ["Personal Portfolio", "Talking-Video Portfolio"],
+  node: ["Talking-Video Portfolio"],
 };
 
 export const EXPERIENCE: Stop[] = [
