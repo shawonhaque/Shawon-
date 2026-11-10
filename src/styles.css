@@ -86,12 +86,8 @@
   --maxw: 1320px;
   --sec-pad: clamp(96px, 14vh, 160px);
   --shadow-hair: inset 0 0 0 1px var(--line);
-  --shadow-soft:
-    0 30px 60px -30px oklch(0.1591 0 0 / 22%),
-    0 8px 20px -12px oklch(0.1591 0 0 / 12%);
-  --shadow-lift:
-    0 40px 80px -30px oklch(0.1591 0 0 / 30%),
-    0 12px 28px -14px oklch(0.1591 0 0 / 16%);
+  --shadow-soft: 0 30px 60px -30px oklch(0.1591 0 0 / 22%), 0 8px 20px -12px oklch(0.1591 0 0 / 12%);
+  --shadow-lift: 0 40px 80px -30px oklch(0.1591 0 0 / 30%), 0 12px 28px -14px oklch(0.1591 0 0 / 16%);
 
   --radius: 0.75rem;
   --background: var(--paper);
@@ -649,12 +645,7 @@
   width: 38px;
   height: 26px;
   border-radius: 6px 6px 10px 10px;
-  background: linear-gradient(
-    180deg,
-    var(--faint),
-    var(--soft) 40%,
-    var(--mute)
-  );
+  background: linear-gradient(180deg, var(--faint), var(--soft) 40%, var(--mute));
   box-shadow: inset 0 0 0 1px oklch(0.1591 0 0 / 20%);
   position: relative;
 }
@@ -727,12 +718,7 @@
   height: 156px;
   border-radius: 18px;
   padding: 3px;
-  background: linear-gradient(
-    160deg,
-    var(--faint),
-    var(--soft) 50%,
-    var(--mute)
-  );
+  background: linear-gradient(160deg, var(--faint), var(--soft) 50%, var(--mute));
   box-shadow: 0 16px 40px -16px oklch(0.1591 0 0 / 35%);
   position: relative;
 }
@@ -741,11 +727,7 @@
   position: absolute;
   inset: -14px;
   border-radius: 28px;
-  background: radial-gradient(
-    closest-side,
-    oklch(0.1591 0 0 / 8%),
-    transparent
-  );
+  background: radial-gradient(closest-side, oklch(0.1591 0 0 / 8%), transparent);
   z-index: -1;
 }
 .idcard-photo img {
@@ -806,14 +788,7 @@
   width: 34px;
   height: 34px;
   border-radius: 999px;
-  background: conic-gradient(
-    from 30deg,
-    var(--soft),
-    var(--faint),
-    var(--white),
-    var(--mute),
-    var(--soft)
-  );
+  background: conic-gradient(from 30deg, var(--soft), var(--faint), var(--white), var(--mute), var(--soft));
   box-shadow: inset 0 0 0 1px var(--line);
   animation: holo 6s linear infinite;
 }
@@ -1111,12 +1086,7 @@
   background: var(--soft);
 }
 .ui-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--soft) 0%,
-    var(--white) 50%,
-    var(--soft) 100%
-  );
+  background: linear-gradient(90deg, var(--soft) 0%, var(--white) 50%, var(--soft) 100%);
   background-size: 200% 100%;
   animation: shimmer 2.4s linear infinite;
 }
