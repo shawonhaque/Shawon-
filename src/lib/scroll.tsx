@@ -5,9 +5,15 @@ import { prefersReducedMotion } from "./hooks";
 let lenis: Lenis | null = null;
 
 export function scrollToTarget(target: string | number) {
-  const el = typeof target === "string" ? document.querySelector<HTMLElement>(target) : null;
+  const el =
+    typeof target === "string"
+      ? document.querySelector<HTMLElement>(target)
+      : null;
   if (lenis) {
-    lenis.scrollTo(typeof target === "number" ? target : (el ?? 0), { offset: 0, duration: 1.2 });
+    lenis.scrollTo(typeof target === "number" ? target : (el ?? 0), {
+      offset: 0,
+      duration: 1.2,
+    });
     return;
   }
   if (typeof target === "number") window.scrollTo({ top: target });

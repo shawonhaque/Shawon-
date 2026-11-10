@@ -11,9 +11,6 @@ A responsive, high-performance interactive personal portfolio website for **Shaw
 - **Experience Timeline**: Vertical progressive path tracing career and education stops.
 - **Contact & Footer**: Interactive hopping letter typography, one-click email copy with toast confirmation, and social links.
 
-## External Reference & Conversation
-- **All-Hands Canvas Conversation**: [https://app.all-hands.dev/canvas/conversations/1145dcf60f5c445ea1fc196205b312ec?backend=locked-cloud&org=8d88fb08-b41d-4bb3-bbb5-276ddfbc92dd](https://app.all-hands.dev/canvas/conversations/1145dcf60f5c445ea1fc196205b312ec?backend=locked-cloud&org=8d88fb08-b41d-4bb3-bbb5-276ddfbc92dd)
-
 ## Tech Stack
 
 - **Framework**: TanStack Start (React 19) + Nitro SSR
