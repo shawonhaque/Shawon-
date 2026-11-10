@@ -363,7 +363,6 @@
 .nav-pill {
   pointer-events: auto;
   position: relative;
-  display: flex;
   gap: 2px;
   padding: 5px;
   border-radius: 999px;
