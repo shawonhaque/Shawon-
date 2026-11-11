@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "theme-color", content: "#f4f2ee" },
-        { title: "Shawon Haque — Full Stack Developer" },
+        { title: "Shawon Haque" },
         {
           name: "description",
           content: "Portfolio of Shawon Haque, Full Stack Developer.",
@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { name: "author", content: "Shawon Haque" },
         {
           property: "og:title",
-          content: "Shawon Haque — Full Stack Developer",
+          content: "Shawon Haque",
         },
         {
           property: "og:description",
