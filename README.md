@@ -24,9 +24,19 @@ source is in this repository and the result is live on GitHub Pages.
 - **Talking Video Hero**: Looping video self-introduction with audio controls and a visibility observer that pauses when it scrolls away.
 - **Interactive Developer ID Card**: Damped pendulum swing driven by pointer physics, with a 3D flip on hover or tap.
 - **Periodic Table of Skills**: Filterable grid of tech-stack elements with brand SVGs and a live inspector panel with brand glows.
-- **Accordion Project Showcase**: Expandable cards for each project (NEXORA, Personal Portfolio, Talking-Video Portfolio, Islamic Life) with illustrative UI sketches.
+- **Accordion Project Showcase**: Expandable cards for each project (NEXORA, Personal Portfolio, Talking-Video Portfolio, Islamic Life, Hawa Computer) with illustrative UI sketches.
 - **Experience Timeline**: Vertical progressive path tracing career and education stops.
 - **Contact & Footer**: Interactive hopping-letter typography, one-click email copy with toast confirmation, and social links.
+
+## Selected work
+
+| Project | What it is | Stack |
+|---|---|---|
+| [NEXORA](https://shawonhaque.github.io/Nexora/) | Full-stack knowledge platform for news, books and study resources | React, TypeScript, Vite, Supabase, PostgreSQL |
+| [Personal Portfolio](https://shawonhaque.github.io) | Accessible, no-build case-study site | HTML, CSS, JavaScript, GitHub Pages |
+| [Talking-Video Portfolio](https://shawonhaque.github.io/Shawon-/) | This site — talking avatar hero, physics ID card, skill inspector | React 19, TanStack Start, Tailwind CSS v4 |
+| [Islamic Life](https://shawonhaque.github.io/Islamic-Life/) | Bengali-first worship companion that runs entirely in the browser | React, TypeScript, Leaflet, Three.js |
+| [Hawa Computer](https://github.com/shawonhaque/Hawa-Computer-) | Bilingual (Bangla/English) IT services and store platform with a staff admin panel | Next.js 15, TypeScript, Tailwind CSS v4, Prisma, PostgreSQL |
 
 ## Tech Stack
 

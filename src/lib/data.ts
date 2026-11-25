@@ -316,16 +316,59 @@ export const PROJECTS: Project[] = [
       href: "https://github.com/shawonhaque/Islamic-Life",
     },
   },
+  {
+    id: "hawa-computer",
+    index: "05",
+    title: "Hawa Computer",
+    kicker: "Bilingual IT Services & Store Platform",
+    description:
+      "A production platform for a Bangladeshi computer and IT-services business: a bilingual Bangla/English storefront for hardware, government-service applications and computer courses, with a customer account area and a staff admin panel behind role-based permissions.",
+    features: [
+      "Bilingual Bangla/English storefront across the public, account and admin areas",
+      "Service orders, government applications, shop checkout and manual payment proof",
+      "Customer area for invoices, support tickets, library loans, courses and files",
+      "Staff admin panel with granular permissions, audit log and CSV exports",
+      "Prisma schema covering the whole business, with migrations and seed data",
+      "Security headers, rate limiting and Zod-validated server actions",
+    ],
+    tech: [
+      { name: "Next.js", logo: "next" },
+      { name: "TypeScript", logo: "typescript" },
+      { name: "Tailwind CSS", logo: "tailwind" },
+      { name: "Prisma", logo: "prisma" },
+      { name: "PostgreSQL", logo: "postgres" },
+    ],
+    github: {
+      label: "GitHub Repo",
+      href: "https://github.com/shawonhaque/Hawa-Computer-",
+    },
+  },
 ];
 
 /** Which projects use a given skill, derived from the résumé project write-ups. */
 export const SKILL_PROJECTS: Record<string, string[]> = {
-  react: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
-  typescript: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
+  react: [
+    "NEXORA",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+    "Hawa Computer",
+  ],
+  typescript: [
+    "NEXORA",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+    "Hawa Computer",
+  ],
+  next: ["Talking-Video Portfolio", "Hawa Computer"],
   vite: ["NEXORA", "Islamic Life"],
-  tailwind: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
+  tailwind: [
+    "NEXORA",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+    "Hawa Computer",
+  ],
   supabase: ["NEXORA"],
-  postgres: ["NEXORA"],
+  postgres: ["NEXORA", "Hawa Computer"],
   rls: ["NEXORA"],
   actions: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
   github: [
@@ -333,18 +376,31 @@ export const SKILL_PROJECTS: Record<string, string[]> = {
     "Personal Portfolio",
     "Talking-Video Portfolio",
     "Islamic Life",
+    "Hawa Computer",
   ],
   html: ["Personal Portfolio"],
   css: ["Personal Portfolio", "Talking-Video Portfolio"],
   javascript: ["Personal Portfolio"],
-  seo: ["Personal Portfolio", "Talking-Video Portfolio", "Islamic Life"],
-  a11y: ["Personal Portfolio", "Talking-Video Portfolio", "Islamic Life"],
+  seo: [
+    "Personal Portfolio",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+    "Hawa Computer",
+  ],
+  a11y: [
+    "Personal Portfolio",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+    "Hawa Computer",
+  ],
   responsive: [
     "Personal Portfolio",
     "Talking-Video Portfolio",
     "Islamic Life",
+    "Hawa Computer",
   ],
-  node: ["Talking-Video Portfolio"],
+  node: ["Talking-Video Portfolio", "Hawa Computer"],
+  rest: ["Hawa Computer"],
 };
 
 export const EXPERIENCE: Stop[] = [
