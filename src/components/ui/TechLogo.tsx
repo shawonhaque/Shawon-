@@ -15,6 +15,8 @@ import {
   siGithub,
   siGithubactions,
   siLinux,
+  siLeaflet,
+  siThreedotjs,
 } from "simple-icons";
 import {
   Layout,
@@ -52,6 +54,8 @@ const BRAND_MAP: Record<string, BrandDef> = {
     path: siGithubactions.path,
   },
   linux: { title: "Linux", hex: "FCC624", path: siLinux.path },
+  leaflet: { title: "Leaflet", hex: "199900", path: siLeaflet.path },
+  three: { title: "Three.js", hex: "000000", path: siThreedotjs.path },
   vscode: {
     title: "Visual Studio Code",
     hex: "007ACC",

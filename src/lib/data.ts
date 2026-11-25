@@ -283,25 +283,67 @@ export const PROJECTS: Project[] = [
       href: "https://github.com/shawonhaque/Shawon-",
     },
   },
+  {
+    id: "islamic-life",
+    index: "04",
+    title: "Islamic Life",
+    kicker: "Bengali-first Islamic Companion",
+    description:
+      "A Bengali-first Islamic companion that runs entirely in the browser: the whole Quran with Bengali translation, prayer times computed from your coordinates, qibla, tafsir, hadith, zakat and a mosque finder that works anywhere in the world.",
+    features: [
+      "All 114 surahs bundled with Bengali translation",
+      "Prayer times computed on-device, six calculation methods",
+      "Worldwide mosque finder on OpenStreetMap with clustering",
+      "Qibla compass, tasbih counter and zakat calculator",
+      "Static build with no backend and no account",
+      "Heavy surfaces code-split behind React.lazy",
+    ],
+    tech: [
+      { name: "React 19", logo: "react" },
+      { name: "TypeScript", logo: "typescript" },
+      { name: "Vite", logo: "vite" },
+      { name: "Tailwind CSS", logo: "tailwind" },
+      { name: "Leaflet", logo: "leaflet" },
+      { name: "Three.js", logo: "three" },
+      { name: "GitHub Actions", logo: "actions" },
+    ],
+    link: {
+      label: "Live Site",
+      href: "https://shawonhaque.github.io/Islamic-Life/",
+    },
+    github: {
+      label: "GitHub Repo",
+      href: "https://github.com/shawonhaque/Islamic-Life",
+    },
+  },
 ];
 
 /** Which projects use a given skill, derived from the résumé project write-ups. */
 export const SKILL_PROJECTS: Record<string, string[]> = {
-  react: ["NEXORA", "Talking-Video Portfolio"],
-  typescript: ["NEXORA", "Talking-Video Portfolio"],
-  vite: ["NEXORA"],
-  tailwind: ["NEXORA", "Talking-Video Portfolio"],
+  react: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
+  typescript: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
+  vite: ["NEXORA", "Islamic Life"],
+  tailwind: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
   supabase: ["NEXORA"],
   postgres: ["NEXORA"],
   rls: ["NEXORA"],
-  actions: ["NEXORA", "Talking-Video Portfolio"],
-  github: ["NEXORA", "Personal Portfolio", "Talking-Video Portfolio"],
+  actions: ["NEXORA", "Talking-Video Portfolio", "Islamic Life"],
+  github: [
+    "NEXORA",
+    "Personal Portfolio",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+  ],
   html: ["Personal Portfolio"],
   css: ["Personal Portfolio", "Talking-Video Portfolio"],
   javascript: ["Personal Portfolio"],
-  seo: ["Personal Portfolio", "Talking-Video Portfolio"],
-  a11y: ["Personal Portfolio", "Talking-Video Portfolio"],
-  responsive: ["Personal Portfolio", "Talking-Video Portfolio"],
+  seo: ["Personal Portfolio", "Talking-Video Portfolio", "Islamic Life"],
+  a11y: ["Personal Portfolio", "Talking-Video Portfolio", "Islamic Life"],
+  responsive: [
+    "Personal Portfolio",
+    "Talking-Video Portfolio",
+    "Islamic Life",
+  ],
   node: ["Talking-Video Portfolio"],
 };
 

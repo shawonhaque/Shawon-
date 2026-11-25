@@ -24,7 +24,7 @@ source is in this repository and the result is live on GitHub Pages.
 - **Talking Video Hero**: Looping video self-introduction with audio controls and a visibility observer that pauses when it scrolls away.
 - **Interactive Developer ID Card**: Damped pendulum swing driven by pointer physics, with a 3D flip on hover or tap.
 - **Periodic Table of Skills**: Filterable grid of tech-stack elements with brand SVGs and a live inspector panel with brand glows.
-- **Accordion Project Showcase**: Expandable cards for each project (NEXORA, Personal Portfolio) with illustrative UI sketches.
+- **Accordion Project Showcase**: Expandable cards for each project (NEXORA, Personal Portfolio, Talking-Video Portfolio, Islamic Life) with illustrative UI sketches.
 - **Experience Timeline**: Vertical progressive path tracing career and education stops.
 - **Contact & Footer**: Interactive hopping-letter typography, one-click email copy with toast confirmation, and social links.
 

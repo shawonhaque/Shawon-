@@ -122,10 +122,72 @@ function TalkingVideoUI() {
   );
 }
 
+function IslamicLifeUI() {
+  const rows = [
+    "বাইতুল মোকাররম",
+    "গুলশান সেন্ট্রাল মসজিদ",
+    "উত্তরা সেক্টর-৭ মসজিদ",
+  ];
+  return (
+    <div className="flex h-full flex-col gap-3 p-5 pt-12">
+      <div className="card flex h-10 items-center gap-2 px-4 text-[13px] text-mute">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          aria-hidden
+        >
+          <path d="M3 11h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+          <circle cx="12" cy="12" r="9" />
+        </svg>
+        মসজিদ খুঁজুন · worldwide
+      </div>
+      <div className="flex flex-1 gap-2">
+        <div className="flex w-1/2 flex-col gap-2">
+          {rows.map((name, i) => (
+            <div key={name} className="card flex flex-col gap-1.5 p-2.5">
+              <span className="truncate text-[10px] text-ink">{name}</span>
+              <div className="ui-bar w-3/5" />
+              <span className="mono text-[9px] text-mute">
+                {(0.4 + i * 0.9).toFixed(1)} km
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="card relative flex w-1/2 items-center justify-center overflow-hidden">
+          <div className="ui-shimmer absolute inset-0 opacity-60" />
+          {[
+            "left-[22%] top-[28%]",
+            "left-[58%] top-[44%]",
+            "left-[38%] top-[68%]",
+          ].map((pos) => (
+            <span
+              key={pos}
+              className={`absolute h-2 w-2 rounded-full bg-ink ${pos}`}
+            />
+          ))}
+          <span className="mono relative text-[9px] text-mute">OSM</span>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
+        {["114 surahs", "Qibla", "Zakat"].map((k) => (
+          <span key={k} className="card mono truncate px-2 py-2 text-ink-2">
+            {k}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const UIS: Record<string, () => React.ReactElement> = {
   nexora: NexoraUI,
   portfolio: PortfolioUI,
   "shawon-3d": TalkingVideoUI,
+  "islamic-life": IslamicLifeUI,
 };
 
 function Panel({
