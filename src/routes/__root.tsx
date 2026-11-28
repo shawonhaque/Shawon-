@@ -14,6 +14,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { withBase } from "../lib/utils";
 
+const SITE_URL = "https://shawonhaque.github.io/Shawon-/";
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -80,9 +82,9 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   {
     head: () => ({
-      // Replace these placeholders with the app's name and description when first building the app.
-      // Each content route, / included, must still set its own head(). Never add og:image or
-      // twitter:image here: every page without its own would inherit the root's preview image.
+      // The site renders a single prerendered page, so the root owns the
+      // canonical URL and the social preview. Add per-page head() overrides
+      // before introducing a second route.
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -102,9 +104,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           content: "Portfolio of Shawon Haque, Full Stack Developer.",
         },
         { property: "og:type", content: "website" },
+        { property: "og:url", content: SITE_URL },
+        { property: "og:image", content: `${SITE_URL}og-cover.jpg` },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: "Shawon Haque - Full Stack Developer" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: `${SITE_URL}og-cover.jpg` },
       ],
       links: [
+        { rel: "canonical", href: SITE_URL },
         {
           rel: "stylesheet",
           href: appCss,
