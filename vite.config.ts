@@ -20,7 +20,16 @@ export default defineConfig({
   tanstackStart: {
     router: { basepath: base },
     prerender: { enabled: true, crawlLinks: false },
-    pages: [{ path: "/" }],
+    // Each section is prerendered to its own path, so a shared /work link answers
+    // with a 200 instead of GitHub Pages' 404 fallback.
+    pages: [
+      { path: "/" },
+      { path: "/work" },
+      { path: "/about" },
+      { path: "/skills" },
+      { path: "/experience" },
+      { path: "/contact" },
+    ],
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },

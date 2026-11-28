@@ -30,13 +30,13 @@ source is in this repository and the result is live on GitHub Pages.
 
 ## Selected work
 
-| Project | What it is | Stack |
-|---|---|---|
-| [NEXORA](https://shawonhaque.github.io/Nexora/) | Full-stack knowledge platform for news, books and study resources | React, TypeScript, Vite, Supabase, PostgreSQL |
-| [Personal Portfolio](https://shawonhaque.github.io) | Accessible, no-build case-study site | HTML, CSS, JavaScript, GitHub Pages |
-| [Talking-Video Portfolio](https://shawonhaque.github.io/Shawon-/) | This site — talking avatar hero, physics ID card, skill inspector | React 19, TanStack Start, Tailwind CSS v4 |
-| [Islamic Life](https://shawonhaque.github.io/Islamic-Life/) | Bengali-first worship companion that runs entirely in the browser | React, TypeScript, Leaflet, Three.js |
-| [Hawa Computer](https://github.com/shawonhaque/Hawa-Computer-) | Bilingual (Bangla/English) IT services and store platform with a staff admin panel | Next.js 15, TypeScript, Tailwind CSS v4, Prisma, PostgreSQL |
+| Project                                                           | What it is                                                                         | Stack                                                       |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| [NEXORA](https://shawonhaque.github.io/Nexora/)                   | Full-stack knowledge platform for news, books and study resources                  | React, TypeScript, Vite, Supabase, PostgreSQL               |
+| [Personal Portfolio](https://shawonhaque.github.io)               | Accessible, no-build case-study site                                               | HTML, CSS, JavaScript, GitHub Pages                         |
+| [Talking-Video Portfolio](https://shawonhaque.github.io/Shawon-/) | This site — talking avatar hero, physics ID card, skill inspector                  | React 19, TanStack Start, Tailwind CSS v4                   |
+| [Islamic Life](https://shawonhaque.github.io/Islamic-Life/)       | Bengali-first worship companion that runs entirely in the browser                  | React, TypeScript, Leaflet, Three.js                        |
+| [Hawa Computer](https://github.com/shawonhaque/Hawa-Computer-)    | Bilingual (Bangla/English) IT services and store platform with a staff admin panel | Next.js 15, TypeScript, Tailwind CSS v4, Prisma, PostgreSQL |
 
 ## Tech Stack
 
@@ -72,3 +72,19 @@ dependencies, runs the tests, prerenders the site with `BASE_PATH` set to the
 repository name, and publishes `dist/client` to GitHub Pages.
 
 Live site: https://shawonhaque.github.io/Shawon-/
+
+### Section links
+
+The site is one document, so each section also has its own path — prerendered
+so a shared link answers 200 instead of GitHub Pages' 404 fallback:
+
+| Path                   | Section       |
+| ---------------------- | ------------- |
+| `/Shawon-/about/`      | About         |
+| `/Shawon-/skills/`     | Skills        |
+| `/Shawon-/work/`       | Selected work |
+| `/Shawon-/experience/` | Experience    |
+| `/Shawon-/contact/`    | Contact       |
+
+These paths all render the same page and set `rel="canonical"` to `/Shawon-/`,
+so only the root URL is indexed.

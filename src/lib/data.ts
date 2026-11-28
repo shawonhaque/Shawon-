@@ -347,12 +347,7 @@ export const PROJECTS: Project[] = [
 
 /** Which projects use a given skill, derived from the résumé project write-ups. */
 export const SKILL_PROJECTS: Record<string, string[]> = {
-  react: [
-    "NEXORA",
-    "Talking-Video Portfolio",
-    "Islamic Life",
-    "Hawa Computer",
-  ],
+  react: ["NEXORA", "Talking-Video Portfolio", "Islamic Life", "Hawa Computer"],
   typescript: [
     "NEXORA",
     "Talking-Video Portfolio",
